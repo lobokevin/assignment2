@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
 <html>
 	<head>
@@ -19,7 +18,7 @@
 		
 		<!-- Include Modernizr in the head, before any other Javascript -->
 		<script src="includes/js/modernizr-2.6.2.min.js"></script>
-		
+                
 	</head>
 	<body>
 	
@@ -54,7 +53,71 @@
 				</div><!-- end container -->
 			</div><!-- end navbar -->
 			
-		   
+                        <div class="container">
+
+
+
+
+
+<?php
+
+// require_once 'login.php';
+
+// login.php
+$hn = 'www.it354.com';
+$db = 'it354_students';
+$un = 'it354_students';
+$pw = 'steinway';
+
+$conn = new mysqli($hn, $un, $pw, $db);
+if ($conn->connect_error) die($conn->connect_error);
+
+$query = "SELECT * FROM customers";
+$result = $conn->query($query);
+if (!$result) die($conn->error);
+
+$rows = $result->num_rows;
+
+/* for ($j = 0 ; $j < $rows ; ++$j)
+{
+  $result->data_seek($j);
+  $row = $result->fetch_array(MYSQLI_ASSOC);
+  
+  echo $row['firstName'] . '<br>';
+  echo $row['lastName'] . '<br>';
+	echo $row['address'] . '<br>';
+  echo $row['city'] . '<br>';
+	echo $row['state'] . '<br>';
+	echo $row['zip'] . '<br>';
+	echo $row['email'] . '<br>';
+	echo $row['phone'] . '<br><br>';
+}
+
+$result->close();
+$conn->close(); */
+
+?>
+<table>
+<tr><th>First Name</th><th>Last Name</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Email</th><th>Phone</th></tr>
+
+<?php for ($j = 0 ; $j < $rows ; ++$j)
+{
+  $result->data_seek($j);
+  $row = $result->fetch_array(MYSQLI_ASSOC); ?>
+<tr><td><?php  echo $row['firstName']  ?></td><td><?php  echo $row['lastName']  ?></td><td><?php  echo $row['address']  ?></td>
+<td><?php  echo $row['city']  ?></td><td><?php  echo $row['state']  ?></td><td><?php  echo $row['zip']  ?></td>
+<td><?php  echo $row['email']  ?></td><td><?php  echo $row['phone']  ?></td>
+</tr>
+<?php
+}
+
+$result->close();
+$conn->close();
+
+?>
+</table>
+</div>
+                        		   
                         
 	<!-- All Javascript at the bottom of the page for faster page loading -->
 		
@@ -72,4 +135,3 @@
 	
 	</body>
 </html>
-
