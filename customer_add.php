@@ -69,17 +69,25 @@
 						</div><!-- end panel-heading -->
             <div class="panel-body">
               <?php
+
+              /* Database connection setups */
               $hn = 'www.it354.com';
               $db = 'it354_students';
               $un = 'it354_students';
               $pw = 'steinway';
 
+              /* Connect to Database */
               $conn = new mysqli($hn, $un, $pw, $db);
+
+              /* If connection fails then die */
               if ($conn->connect_error) die($conn->connect_error);
 
+              /* Clean user input by adding slashes */
               foreach($_POST as $key=>$value) {
                   $clean[$key]=addslashes($value);
               }
+
+              /* Set variables with user's cleaned inputs */
               //print_r($clean);
               $firstName = $clean['firstName'];
               $lastName = $clean['lastName'];
@@ -90,13 +98,17 @@
               $phone = $clean['phone'];
               $email = $clean['email'];
 
+              /* Create INSERT INTO statment with values */
               $sql = "INSERT INTO customers ".
                      "(firstName,lastName, address,city,state,zip,phone,email) ".
                      "VALUES ".
                      "('$firstName','$lastName','$address','$city','$state','$zip','$phone','$email')";
               //echo $sql;
 
+              /* Run the query */
               $result = $conn->query($sql);
+
+              /* Check if success */
               if (!$result)
               {
                 die($conn->error);
