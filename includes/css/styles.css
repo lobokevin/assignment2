@@ -3,9 +3,8 @@
 My Custom CSS
 =============
 
-Author:  Brad Hussey
-Updated: August 2013
-Notes:	 Hand coded for Udemy.com
+Author:  Kaiser Ahmed
+Updated: January 2017
 
 */
 
@@ -16,6 +15,7 @@ Notes:	 Hand coded for Udemy.com
 
 #features {
 	text-align: center;
+	margin-top: 60px;
 }
 
 #features img {
@@ -29,8 +29,9 @@ Notes:	 Hand coded for Udemy.com
 footer {
 	background: #333;
 	color: #eee;
-	font-size: 11px;
+	font-size: 12px;
 	padding: 20px;
+	margin-top:10px;
 }
 
 
@@ -61,45 +62,22 @@ ul.unstyled {
    Navbar
    -------------------------------------- */
 
-#searchInput {
-	width: 200px;
-}
-
 .navbar-brand {
 	padding: 13px 15px;
 }
-   
-   
+
+
+
 /* --------------------------------------
-   Carousel
+   Tab Styles
    -------------------------------------- */
-
-#myCarousel {
-	margin-top: 60px;
+#tab2  .list-group {
+	margin-top: 20px;
 }
 
-.carousel-caption {
-	font-size: 24px;
+#tab2 .small {
+	font-size: 10px;
 }
-
-.carousel-caption h4 {
-	font-size: 32px;
-}
-
-#myCarousel .item { height: 400px; }
-
-#slide1 {
-	background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
-}
-
-#slide2 {
-	background: url('../../images/carousel_medium_02.jpg') top center no-repeat;
-}
-
-#slide3 {
-	background: url('../../images/carousel_medium_03.jpg') top center no-repeat;
-}
-
 
 /* --------------------------------------
    Global Styles
@@ -156,62 +134,13 @@ ul.unstyled {
 
 /* Portrait & landscape phone */
 @media (max-width: 480px) {
-	
+
 	.thumbnail .price {
 		font-size: 14px;
 	}
-	
+
 	.thumbnail .price sup {
 		font-size: 10px;
 	}
-	
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-	
-	#myCarousel .item { height: 310px; }
-	
-	#slide1 {
-		background: url('../../images/carousel_small_01.jpg') top center no-repeat;
-	}
-	
-	#slide2 {
-		background: url('../../images/carousel_small_02.jpg') top center no-repeat;
-	}
-	
-	#slide3 {
-		background: url('../../images/carousel_small_03.jpg') top center no-repeat;
-	}
-	
-	.carousel-caption {
-		font-size: 16px;
-	}
-	
-	.carousel-caption h4 {
-		font-size: 22px;
-	}
-	
-}
-
-/* Large desktop */
-@media (min-width: 1200px) {
-
-	#myCarousel .item { height: 500px; }
-	
-	#slide1 {
-		background: url('../../images/carousel_large_01.jpg') top center no-repeat;
-	}
-	
-	#slide2 {
-		background: url('../../images/carousel_large_02.jpg') top center no-repeat;
-	}
-	
-	#slide3 {
-		background: url('../../images/carousel_large_03.jpg') top center no-repeat;
-	}
 
 }
-
-
-
