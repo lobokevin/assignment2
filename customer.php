@@ -31,12 +31,12 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					<a class="navbar-brand" href="/"><img src="images/logo.png" alt="Kaiser Ahmed Logo"></a>
+					<a class="navbar-brand" href="./home.html"><img src="images/logo.png" alt="Kaiser Ahmed Logo"></a>
 
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav navbar-nav">
 							<li>
-								<a href="./index.html">Home</a>
+								<a href="./home.html">Home</a>
 							</li>
 							<li class="active">
 								<a href="#">View Customers</a>
