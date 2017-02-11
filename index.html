@@ -182,6 +182,14 @@
 											});
 							branch_kevin.checkout();
 							branch_kevin.commit({
+										dotColor: "yellow",
+										dotSize: 10,
+										dotStrokeWidth: 10,
+										sha1: "Kaiser - 7e31403",
+										message: "Template for custmers' view page updated"
+									});
+							branch_kevin.checkout();
+							branch_kevin.commit({
 										dotColor: "white",
 										dotSize: 10,
 										dotStrokeWidth: 10,
@@ -197,14 +205,32 @@
 										sha1: "Kevin - c573bfd",
 										message: "customer-view page links added to top menu"
 									});
-							branch_kaiser.merge(master, "Merge with Kaiser's branch: add-customer");
-							branch_kevin.merge(master, "Merge with Kevin's branch: customer-table");
+							branch_kaiser.merge(master,{
+										dotColor: "yellow",
+										dotSize: 10,
+										dotStrokeWidth: 10,
+										sha1: "Kaiser - "
+									}, "Master merged with Kaiser's branch: add-customer");
+							branch_kevin.merge(master,{
+										dotColor: "#428bca",
+										dotSize: 10,
+										dotStrokeWidth: 10,
+										sha1: "Kevin - "
+									}, "Mater merged with Kevin's branch: customer-table");
 							master.commit({
 										dotColor: "yellow",
 										dotSize: 10,
 										dotStrokeWidth: 10,
-										sha1: "Kaiser - d32342",
+										sha1: "Kaiser - 9ed5f5f",
 										message: "Fixed broken links and added GIT Logs in homepage "
+									});
+
+							master.commit({
+										dotColor: "yellow",
+										dotSize: 10,
+										dotStrokeWidth: 10,
+										sha1: "Kaiser -",
+										message: "Updated GIT Logs in homepage "
 									});
 
 							</script>
