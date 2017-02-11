@@ -17,6 +17,9 @@
 
 		<!-- Include Modernizr in the head, before any other Javascript -->
 		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.8.3/gitgraph.min.js"></script>
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.8.3/gitgraph.min.css" rel="stylesheet">
 	</head>
 	<body>
 
@@ -32,7 +35,7 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					<a class="navbar-brand" href="/"><img src="images/logo.png" alt="Kaiser Ahmed Logo"></a>
+					<a class="navbar-brand" href="./"><img src="images/logo.png" alt="Kaiser Ahmed Logo"></a>
 
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav navbar-nav">
@@ -77,7 +80,7 @@
 						<div class="panel-heading">
 							<h3 class="panel-title">Partner A: Kevin Lobo</h3>
 						</div><!-- end panel-heading -->
-						<img src="http://placehold.it/200x200" alt="Kaiser Ahmed" class="img-circle">
+						<img src="images/kevinpic.JPG" alt="Kevin Lobo" class="img-circle">
 
 						<p>Created a page that lets you view customer records in a table format from a customer table in the database. </p>
 
@@ -95,6 +98,121 @@
 				</div><!-- end feature -->
 
 			</div><!-- end features -->
+
+			<div class="row">
+				<div class="col-sm-12 ">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">Our project GIT Log graph till now...</h3>
+						</div><!-- end panel-heading -->
+						<div class="panel-body">
+							<canvas id="gitGraph"></canvas>
+							<script type="text/javascript">
+							var gitgraph = new GitGraph({
+									template: "metro",
+									orientation: "horizontal",
+									mode: "compact"
+									});
+
+							var master = gitgraph.branch("master");
+							gitgraph.commit({
+									  dotColor: "white",
+									  dotSize: 10,
+									  dotStrokeWidth: 10,
+									  sha1: "Kevin - e026240",
+									  message: "Bootstrap added"
+									});
+							gitgraph.commit({
+											  dotColor: "white",
+											  dotSize: 10,
+											  dotStrokeWidth: 10,
+											  sha1: "Kevin - ecb4095",
+											  message: "Template completed."
+											});
+							var branch_kevin = gitgraph.branch("customer-table");    // New branch from HEAD
+							var branch_kaiser = master.branch("add-customer"); // New branch from develop
+
+							branch_kevin.commit({
+										dotColor: "white",
+										dotSize: 10,
+										dotStrokeWidth: 10,
+										sha1: "Kevin - f36a4dc",
+										message: "Customer.php draft"
+									});
+							branch_kaiser.checkout();
+							branch_kaiser.commit({
+												dotColor: "white",
+												dotSize: 10,
+												dotStrokeWidth: 10,
+												sha1: "Kaiser - 7e0adee",
+												message: "Form of customer addition added."
+											});
+							master.checkout();
+							master.commit({
+												dotColor: "yellow",
+												dotSize: 10,
+												dotStrokeWidth: 10,
+												sha1: "Kaiser - 3cf630",
+												message: "Home page updated"
+											});
+							branch_kaiser.checkout();
+							branch_kaiser.commit({
+												dotColor: "white",
+												dotSize: 10,
+												dotStrokeWidth: 10,
+												sha1: "Kaiser - ddc770a",
+												message: "Customer_add.php added with sql code"
+											});
+
+						branch_kaiser.commit({
+											dotColor: "white",
+											dotSize: 10,
+											dotStrokeWidth: 10,
+											sha1: "Kaiser - b939d2d",
+											message: "customer_add.html added to top menu"
+										});
+
+
+							branch_kaiser.commit({
+												dotColor: "white",
+												dotSize: 10,
+												dotStrokeWidth: 10,
+												sha1: "Kaiser - 0e6fddf",
+												message: "Comments added for clarification"
+											});
+							branch_kevin.checkout();
+							branch_kevin.commit({
+										dotColor: "white",
+										dotSize: 10,
+										dotStrokeWidth: 10,
+										sha1: "Kevin - 63875f5",
+										message: "Navigation fixed. Image added"
+									});
+
+							branch_kevin.checkout();
+							branch_kaiser.commit({
+										dotColor: "#428bca",
+										dotSize: 10,
+										dotStrokeWidth: 10,
+										sha1: "Kevin - c573bfd",
+										message: "customer-view page links added to top menu"
+									});
+							branch_kaiser.merge(master, "Merge with Kaiser's branch: add-customer");
+							branch_kevin.merge(master, "Merge with Kevin's branch: customer-table");
+							master.commit({
+										dotColor: "yellow",
+										dotSize: 10,
+										dotStrokeWidth: 10,
+										sha1: "Kaiser - d32342",
+										message: "Fixed broken links and added GIT Logs in homepage "
+									});
+
+							</script>
+						</div>
+					</div><!-- end panel -->
+
+				</div>
+			</div>
 
 		</div><!-- end container -->
 

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>ASSIGNMENT 2 | View Customers Page </title>
-		<meta name="description" content="A responsive website for assignment 2 by Kaiser and Kavin with the new Twitter Bootstrap 3.">
+		<meta name="description" content="A responsive website for assignment 2 by Kaiser and Kevin with the new Twitter Bootstrap 3.">
 
 		<!-- Mobile viewport optimized -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -31,12 +31,12 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					<a class="navbar-brand" href="./home.html"><img src="images/logo.png" alt="Kaiser Ahmed Logo"></a>
+					<a class="navbar-brand" href="./index.html"><img src="images/logo.png" alt="Kaiser Ahmed Logo"></a>
 
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav navbar-nav">
 							<li>
-								<a href="./home.html">Home</a>
+								<a href="./index.html">Home</a>
 							</li>
 							<li class="active">
 								<a href="#">View Customers</a>
@@ -60,7 +60,7 @@
 			</div><!-- end navbar -->
 			<div class="row" id="features">
 
-				<div class="col-sm-10 feature">
+				<div class="col-sm-12 feature">
 					<div class="panel">
 						<div class="panel-heading">
 							<h3 class="panel-title text-left">View Customers</h3>
@@ -104,8 +104,17 @@
 							$conn->close(); */
 
 							?>
-							<table>
-							<tr><th>First Name</th><th>Last Name</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Email</th><th>Phone</th></tr>
+							<table class = "table table-bordered table-hover">
+								<tr>
+									<th>First Name</th>
+									<th>Last Name</th>
+									<th>Address</th>
+									<th>City</th>
+									<th>State</th>
+									<th>Zip</th>
+									<th>Email</th>
+									<th>Phone</th>
+								</tr>
 
 							<?php for ($j = 0 ; $j < $rows ; ++$j)
 							{

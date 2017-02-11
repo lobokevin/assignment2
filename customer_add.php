@@ -32,7 +32,7 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					<a class="navbar-brand" href="/"><img src="images/logo.png" alt="Kaiser Ahmed Logo"></a>
+					<a class="navbar-brand" href="./index.html"><img src="images/logo.png" alt="Kaiser Ahmed Logo"></a>
 
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav navbar-nav">
